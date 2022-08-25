@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+
+/*gradient*/
+--gradient1-:hsl(6, 100%, 80%);
+--gradient2-:hsl(335, 100%, 65%);
+
+/*Neutral*/
+--Pale-Blue-: hsl(243, 100%, 93%);
+--Grayish-Blue-: hsl(229, 7%, 55%);
+--Dark-Blue-: hsl(228, 56%, 26%);
+--VDark-Blue-: hsl(229, 57%, 11%);
+
+
+
+}
+
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*setting font-size to 10px for easier rem calculation*/
+html{
+font-size: 62.5%; /*base font size 16px (100%:16px=x:10px x=62.5%)*/
+}
+
+
+/*basic styles*/
+
+body{
+background-image: url("../images/bg-mobile.png");
+color: var(--Pale-Blue-);
+font-family:'Raleway', sans-serif;
+font-weight: 400;
+font-size:1.4rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height:100vh;
+}
+
+.header{
+    background-color: var(--Dark-Blue-);
+    border-radius: 0.8rem
+}
+
+.icon-menu{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    align-self: center;
+    justify-content: center;
+    background-color: var(--VDark-Blue-);
+    width:5rem;
+    height:5rem;
+}
+
+.attribution{
+    display: none;
+}
+
