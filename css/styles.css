@@ -11,9 +11,6 @@
 --Grayish-Blue-: hsl(229, 7%, 55%);
 --Dark-Blue-: hsl(228, 56%, 26%);
 --VDark-Blue-: hsl(229, 57%, 11%);
-
-
-
 }
 
 /*reset*/
@@ -33,6 +30,8 @@ font-size: 62.5%; /*base font size 16px (100%:16px=x:10px x=62.5%)*/
 
 body{
 background-image: url("../images/bg-mobile.png");
+background-repeat: no-repeat;
+background-position: center;
 color: var(--Pale-Blue-);
 font-family:'Raleway', sans-serif;
 font-weight: 400;
@@ -44,26 +43,137 @@ justify-content: center;
 height:100vh;
 }
 
-.header{
+main{
+    
+}
+
+/*box shadow to redo*/
+.container{
     background-color: var(--Dark-Blue-);
-    border-radius: 0.8rem
+    boxshadow: 0.2rem 0.2rem 1rem 1rem hsla(229, 57%, 11%, 0.3);
+}
+
+/*header*/
+
+.header{
+    border-radius: 1rem 10rem 1rem 1rem;
+    padding: 4rem 9.5rem 4rem 4rem;
+    margin-bottom: 1.6rem;
 }
 
 .icon-menu{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 3rem;
 }
 
 .icon{
-    align-self: center;
-    justify-content: center;
     background-color: var(--VDark-Blue-);
-    width:5rem;
+    border-radius: 1rem;
+    width: 5rem;
     height:5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:1.5rem;
 }
 
+/*content section*/
+
+.content{
+    border-radius: 1rem;
+    padding: 3rem 3rem 5rem 3rem;
+    margin-bottom: 2.8rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+/* gradient cursor*/
+
+.gradient{
+    width:100%;
+    height:2rem;
+    background-color: hsla(229, 57%, 11%, 0.5);
+    border-radius: 1rem;
+    margin: 1.5rem 0 1rem 0;
+    display:flex;
+    align-items: center;
+}
+
+.gradient-bar{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    height:1.4rem;
+    margin-left:0.3rem;
+    width: 70%;
+    border-radius: 1rem;
+    background-image: linear-gradient(90deg, var(--gradient1-), var(--gradient2-));
+}
+
+.cursor{
+    border-radius: 1rem;;
+    width: 1rem;
+    height:1rem;
+    background-color: #fff;
+    margin-right:0.2rem;
+}
+
+.values{
+    font-size:1.2rem;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*floating message*/
+.message{
+    position:absolute;
+    left:25%;
+    bottom:10rem;
+    margin-bottom:2rem;
+    color: var(--Grayish-Blue-);
+    background-color: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding:1.3rem 2.5rem;
+}
+
+.message h2{
+    color: var(--VDark-Blue-);
+    font-size: 4rem;
+}
+
+.message p{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-left:1rem;
+} 
+
+/*footer*/
 .attribution{
     display: none;
 }
 
+/*media query for desktop version*/
+@media (min-width:736px) {
+    body{
+        background: url("../images/bg-desktop.png");
+        background-color: var(--VDark-Blue-);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        }
+    
+}
