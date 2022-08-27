@@ -51,7 +51,7 @@ Breakdown point at 376px (mobile version) and 900px (switch to the vertical mobi
 
 The main layout is made with CSS flexbox
 The floating message was positioned with the position property: absolute in both the desktop and mobile layouts.
-The speach-bubble shape of the desktop layout is created with the ::before pseudo element.
+The speech-bubble shape of the desktop layout is created with the ::before pseudo element.
 Below the code:
 
 ```css
