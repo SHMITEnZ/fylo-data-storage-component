@@ -29,6 +29,7 @@ font-size: 62.5%; /*base font size 16px (100%:16px=x:10px x=62.5%)*/
 /*basic styles*/
 
 body{
+    background-color: var(--VDark-Blue-);
 background-image: url("../images/bg-mobile.png");
 background-repeat: no-repeat;
 background-position: center;
@@ -43,14 +44,10 @@ justify-content: center;
 height:100vh;
 }
 
-main{
-    
-}
-
 /*box shadow to redo*/
 .container{
     background-color: var(--Dark-Blue-);
-    boxshadow: 0.2rem 0.2rem 1rem 1rem hsla(229, 57%, 11%, 0.3);
+    box-shadow: -0.2rem 0.2rem 2rem 0 hsla(229, 57%, 11%, 0.5);
 }
 
 /*header*/
@@ -58,7 +55,6 @@ main{
 .header{
     border-radius: 1rem 10rem 1rem 1rem;
     padding: 4rem 9.5rem 4rem 4rem;
-    margin-bottom: 1.6rem;
 }
 
 .icon-menu{
@@ -82,13 +78,14 @@ main{
 /*content section*/
 
 .content{
+    margin-top: 1.6rem;
     border-radius: 1rem;
-    padding: 3rem 3rem 5rem 3rem;
-    margin-bottom: 2.8rem;
+    padding: 3.5rem 3.5rem 5.5rem 3.5rem;
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly; 
+    gap:1rem;
+    position:relative;
 }
 
 /* gradient cursor*/
@@ -96,9 +93,9 @@ main{
 .gradient{
     width:100%;
     height:2rem;
+    padding:0.3rem;
     background-color: hsla(229, 57%, 11%, 0.5);
     border-radius: 1rem;
-    margin: 1.5rem 0 1rem 0;
     display:flex;
     align-items: center;
 }
@@ -108,7 +105,6 @@ main{
     align-items: center;
     justify-content: end;
     height:1.4rem;
-    margin-left:0.3rem;
     width: 70%;
     border-radius: 1rem;
     background-image: linear-gradient(90deg, var(--gradient1-), var(--gradient2-));
@@ -133,9 +129,7 @@ main{
 /*floating message*/
 .message{
     position:absolute;
-    left:25%;
-    bottom:10rem;
-    margin-bottom:2rem;
+    top:12.55rem;
     color: var(--Grayish-Blue-);
     background-color: #fff;
     display:flex;
@@ -143,7 +137,7 @@ main{
     justify-content: space-around;
     font-weight: 700;
     border-radius: 1rem;
-    padding:1.3rem 2.5rem;
+    padding:1.2rem 2.2rem;
 }
 
 .message h2{
@@ -163,17 +157,62 @@ main{
 }
 
 /*media query for desktop version*/
-@media (min-width:736px) {
+@media (min-width:900px) {
     body{
         background: url("../images/bg-desktop.png");
         background-color: var(--VDark-Blue-);
         background-repeat: no-repeat;
         background-position: bottom;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
         height:100vh;
         }
-    
+
+    main{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0 3rem;
+    }
+
+    .content{
+        height:fit-content;
+        width:40%;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .message{
+        position: absolute;
+        top:-4.5rem;
+        right:4rem;
+    }
+
+    .message::before{
+        content: "";
+        width:0;
+        height:0;
+        border-style: solid;
+        border-width: 3.5rem 0 0 3.5rem;
+        border-top-color: #fff;
+        border-left-color: transparent;
+        position: absolute;
+        bottom:-2.5rem;
+        right:0;
+    }
+}
+
+@media (min-width: 376px){
+    body{
+        background: url("../images/bg-desktop.png");
+        background-color: var(--VDark-Blue-);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
 }
