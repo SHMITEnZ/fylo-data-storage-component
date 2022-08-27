@@ -22,18 +22,20 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-I made this using a mobile firs workflow and added to media queries for I created 3 breakdown points for these design: see below screenshots.
+I made this using a mobile first workflow and added 2 media queries for the desktop version 
 
-
+Breakdown point at 376px (mobile version) and 900px (switch to the vertical mobile layout as the horizontal layout starts to breakdown but keeping the desktop background image)
 
 ### Screenshot
 
-![Desktop_Fylo data storage component](./screenshoots/Desktop_Fylo data storage component.jpg)
+![Desktop_Fylo data storage component](/screenshoots/Desktop_Fylo data storage component.jpg)
+
+![Mobile_Fylo data storage component](/screenshoots/Mobile_Fylo data storage component.jpg)
 
 ### Links
 
 - Solution URL: [https://github.com/SHMITEnZ/fylo-data-storage-component](https://github.com/SHMITEnZ/fylo-data-storage-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://shmitenz.github.io/fylo-data-storage-component/](https://shmitenz.github.io/fylo-data-storage-component/)
 
 ## My process
 
@@ -47,13 +49,10 @@ I made this using a mobile firs workflow and added to media queries for I create
 
 ### What I learned
 
-I learned to how to use pseudo-element and 
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+The main layout is made with CSS flexbox
+The floating message was positioned with the position property: absolute in both the desktop and mobile layouts.
+The speach-bubble shape of the desktop layout is created with the ::before pseudo element.
+Below the code:
 
 ```css
 ..message::before{
@@ -72,9 +71,11 @@ To see how you can add code snippets, see below:
 
 ### Useful resources
 
-- [MDM ::Before pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) -  
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [MDM ::Before pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) -  pseudo elemente ::before
+- [W3 School](https://www.w3schools.com/css/css_positioning.asp) - This position property 
 
 ## Author
+
+- Github - [SHMITEnZ](https://github.com/SHMITEnZ)
+- Frontend Mentor - [@SHMITEnz](https://www.frontendmentor.io/profile/SHMITEnZ)
 
